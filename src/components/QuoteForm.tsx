@@ -9,8 +9,12 @@ interface QuoteFormProps {
 
 const QuoteForm: React.FC<QuoteFormProps> = ({ initialAuthor = '', initialCategory = '', initialText = '', onSave }) => {
     const [author, setAuthor] = useState(initialAuthor);
+
     const [category, setCategory] = useState(initialCategory);
+
     const [text, setText] = useState(initialText);
+
+
 
     const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault();
@@ -28,4 +32,3 @@ const QuoteForm: React.FC<QuoteFormProps> = ({ initialAuthor = '', initialCatego
 };
 
 export default QuoteForm;
-

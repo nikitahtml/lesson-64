@@ -8,8 +8,17 @@ import CategoryPage from './containers/CategoryPage';
 
 const App: React.FC = () => {
     return (
-<>
 
-</>
-    )
+            <Router>
+                <Header />
+                <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/add-quote" element={<AddQuotePage />} />
+                    <Route path="/edit-quote/:id" element={<EditQuotePage />} />
+                    <Route path="/category/:category" element={<CategoryPage />} />
+                </Routes>
+            </Router>
+        );
+    };
+
 export default App;
